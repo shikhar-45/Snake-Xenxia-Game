@@ -1,0 +1,121 @@
+
+/* CSS Reset */
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    background:url('../background image/bg.jpg');
+    height:100vh;
+    width:100vw;
+    background-repeat:no-repeat;
+    background-size:100vw 100vh;
+    display:flex;
+}
+
+.verticalFlexbox{
+    display:flex;
+    flex-direction : column;
+    height:100vmin;
+    width:59vmin;
+    font-family: 'Itim', cursive;
+}
+
+.title_container{
+    height:78vmin;
+    width:59vmin;
+    align-self: flex-start;
+    padding-top: 29px;
+    font-size:100px;
+}
+
+#titlePart1{
+    padding-left: 40px;
+}
+
+#titlePart2{
+    padding-left:30px;
+}
+
+.instructions{
+    height:30vmin;
+    width:59vmin;
+    font-size : 35px;
+    padding-bottom : 29px;
+}
+
+#instruction1{
+    padding-left:27px;
+}
+
+#instruction2{
+    padding-left:27px;
+    padding-top:15px;
+}
+#board{
+    
+    /*vmin is the smaller of vh and vw. If vh < vw , then 1vmin = 1vh.
+    similarly , if vw < vh , then 1vmin = 1vw.
+    opposite is true for vmax.*/
+    
+    height:90vmin;
+    width:90vmin;
+    align-self:center;
+    background:linear-gradient(#f3f34b,#f3a921);
+    border:7px solid black;
+    box-shadow: 3px 3px #615e5e;
+    display:grid;
+    grid-template-rows:repeat(18 , 1fr);
+    grid-template-columns:repeat(18 , 1fr);
+}
+
+.score_container{
+    width:61vmin;
+    height:50vmin;
+    font-family: 'Itim', cursive;
+    font-size:60px;
+    padding-top:29px;
+}
+
+#scoreCount{
+    padding-left:113px;
+}
+
+#hiscore{
+    padding-left:78px;
+}
+
+.head{
+    background : linear-gradient(red , black);
+    border : 1.5px solid red;
+    border-radius : 13px;
+    transform : scale(1.15);
+}
+
+.snakeBody{
+    background : linear-gradient(blue , black);
+    border : 1.5px solid blue;
+    border-radius : 12px;
+}
+
+.food{
+    background : linear-gradient(purple , black);
+    border : 1px solid purple;
+    border-radius : 13px;
+    animation-name : foodGrow;
+    animation-duration : 0.125s;
+    animation-iteration-count : infinite;
+    animation-timing-function : linear;
+}
+
+@keyframes foodGrow{
+    from{
+        transform : scale(1);
+    }
+    to{
+        transform : scale(1.2);
+    }
+}
+
+@media only screen and (max-width : 1000px){}
